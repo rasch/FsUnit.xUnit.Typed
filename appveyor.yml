@@ -3,5 +3,5 @@ pull_requests:
   do_not_increment_build_number: true
 clone_depth: 1
 build_script:
-- cmd: build.cmd Release
+- cmd: build.cmd Build
 deploy: off
