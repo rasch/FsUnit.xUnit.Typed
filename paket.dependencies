@@ -1,20 +1,22 @@
 source https://api.nuget.org/v3/index.json
-framework: net462
-
-nuget xunit ~> 2.2 prerelease
-nuget xunit.abstractions ~> 2
+framework: auto-detect
+nuget FSharp.Core >= 4.1.0
+nuget FSharp.NET.Sdk >= 1.0.0
+nuget Microsoft.NET.Test.Sdk 15.0.0
 nuget NHamcrest
+nuget xunit 2.2.0
+nuget xunit.abstractions ~> 2
 
 group .build
-	source https://api.nuget.org/v3/index.json
-	framework: net462
-	nuget Fake
-	nuget SourceLink
-	nuget SourceLink.Fake
-	nuget xunit.runner.console ~> 2.2 prerelease
+    source https://api.nuget.org/v3/index.json
+    framework: auto-detect
+    nuget Fake
+    nuget SourceLink.Create.CommandLine
 
 group .test
-	source https://api.nuget.org/v3/index.json
-	framework: net462
-	nuget FSharp.Compiler.CodeDom
-	nuget FSharp.Compiler.Service
+    source https://api.nuget.org/v3/index.json
+    framework: auto-detect
+    nuget FSharp.Compiler.CodeDom
+    nuget FSharp.Compiler.Service
+    nuget xunit.runner.console ~> 2.3 prerelease
+    nuget xunit.runner.visualstudio 2.2.0

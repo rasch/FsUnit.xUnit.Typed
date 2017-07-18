@@ -1,35 +1,62 @@
-FRAMEWORK: NET462
+RESTRICTION: == net461
 NUGET
   remote: https://api.nuget.org/v3/index.json
-    NHamcrest (1.2.1)
-    xunit (2.2.0-beta5-build3474)
-      xunit.assert (2.2.0-beta5-build3474)
-      xunit.core (2.2.0-beta5-build3474)
+    FSharp.Compiler.Tools (4.1.23)
+    FSharp.Core (4.2.1)
+    FSharp.NET.Sdk (1.0.5)
+      FSharp.Compiler.Tools (>= 4.1.17)
+    Microsoft.NET.Test.Sdk (15.0)
+      Microsoft.TestPlatform.TestHost (>= 15.0)
+    Microsoft.TestPlatform.TestHost (15.0)
+    NHamcrest (2.0.1)
+    xunit (2.2)
+      xunit.assert (2.2)
+      xunit.core (2.2)
     xunit.abstractions (2.0.1)
-    xunit.assert (2.2.0-beta5-build3474)
-    xunit.core (2.2.0-beta5-build3474)
-      xunit.extensibility.core (2.2.0-beta5-build3474)
-      xunit.extensibility.execution (2.2.0-beta5-build3474)
-    xunit.extensibility.core (2.2.0-beta5-build3474)
-    xunit.extensibility.execution (2.2.0-beta5-build3474)
+    xunit.assert (2.2)
+    xunit.core (2.2)
+      xunit.extensibility.core (2.2)
+      xunit.extensibility.execution (2.2)
+    xunit.extensibility.core (2.2)
+      xunit.abstractions (>= 2.0.1)
+    xunit.extensibility.execution (2.2)
+      xunit.extensibility.core (2.2)
 
 GROUP .build
-FRAMEWORK: NET462
+RESTRICTION: == net461
 NUGET
   remote: https://api.nuget.org/v3/index.json
-    FAKE (4.50)
-    SourceLink (1.1)
-    SourceLink.Fake (1.1)
-    xunit.runner.console (2.2.0-beta5-build3474)
+    FAKE (4.62.5)
+    Microsoft.Build.Framework (15.1.1012)
+      System.Collections (>= 4.0.11)
+      System.Diagnostics.Debug (>= 4.0.11)
+      System.Globalization (>= 4.0.11)
+      System.Runtime (>= 4.1)
+      System.Runtime.InteropServices (>= 4.1)
+      System.Threading (>= 4.0.11)
+      System.Threading.Thread (>= 4.0)
+    Microsoft.Build.Utilities.Core (15.1.1012)
+      Microsoft.Build.Framework (15.1.1012)
+    SourceLink.Create.CommandLine (2.1.2)
+      Microsoft.Build.Utilities.Core (>= 15.1.548)
+    System.Collections (4.3)
+    System.Diagnostics.Debug (4.3)
+    System.Globalization (4.3)
+    System.Runtime (4.3)
+    System.Runtime.InteropServices (4.3)
+    System.Threading (4.3)
+    System.Threading.Thread (4.3)
 
 GROUP .test
-FRAMEWORK: NET462
+RESTRICTION: == net461
 NUGET
   remote: https://api.nuget.org/v3/index.json
     FSharp.Compiler.CodeDom (1.0.0.1)
-    FSharp.Compiler.Service (9.0.1)
-      System.Collections.Immutable (>= 1.2)
-      System.Reflection.Metadata (>= 1.4.1-beta-24227-04)
+    FSharp.Compiler.Service (13.0)
+      System.Collections.Immutable (>= 1.3.1)
+      System.Reflection.Metadata (>= 1.4.2)
     System.Collections.Immutable (1.3.1)
     System.Reflection.Metadata (1.4.2)
       System.Collections.Immutable (>= 1.3.1)
+    xunit.runner.console (2.3.0-beta3-build3705)
+    xunit.runner.visualstudio (2.2)

@@ -1,0 +1,14 @@
+{
+    "version": "0.1.0",
+    "command": ".\\packages\\.build\\FAKE\\tools\\FAKE.exe",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "build",
+            "args": [ ],
+            "isBuildCommand": true,
+            "showOutput": "always"
+        }
+    ]
+}

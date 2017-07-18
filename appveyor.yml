@@ -1,4 +1,4 @@
-version: 0.2.1.{build}.{branch}-alpha
+version: 0.3.0.{build}.{branch}-alpha
 pull_requests:
   do_not_increment_build_number: true
 clone_depth: 3
@@ -11,3 +11,5 @@ artifacts:
   - path: '.build\nugets\*.nupkg'
     name: nuget
 deploy: off
+init:
+  - git config --global core.autocrlf input

@@ -1,45 +1,23 @@
 ﻿#I "packages/.build/FAKE/tools"
 #r "FakeLib.dll"
 
-#load "packages/.build/SourceLink.Fake/tools/Fake.fsx"
-open SourceLink
-
 open Fake
-open Fake.Testing
+open Fake.DotNetCli
 
 let projectName = "FsUnit.xUnit.Typed"
 let solutionFile = projectName |> sprintf "%s.sln"
 let buildDir = "./.build"
 let repoDir = __SOURCE_DIRECTORY__
 
-let run target =
-    !! solutionFile
-    |> MSBuildRelease "" target
-    |> Log target
+Target "Clean" (fun _ -> CleanDir buildDir)
 
-Target "Clean" (fun _ ->
-    run "Clean"
-    CleanDir buildDir)
+Target "Restore" (fun _ -> Restore id)
 
-Target "Build" (fun _ ->
-    run "Build")
+Target "Build" (fun _ -> Build id)
 
 Target "Test" (fun _ ->
-    !! "tests/**/bin/Release/*Test.dll"
-    |> xUnit2 (fun p ->
-        { p with
-            Parallel = ParallelMode.All
-            ToolPath = "packages/.build/xunit.runner.console/tools/xunit.console.exe"
-            XmlOutputPath = buildDir </> "TestResults.xml" |> Some }))
-
-Target "SourceLink" (fun _ ->
-    let baseUrl = sprintf "https://raw.githubusercontent.com/CaringDev/%s/{0}/%%var2%%" projectName
-    !! "src/**/*.??proj"
-    |> Seq.iter (fun projFile ->
-        let proj = VsProj.LoadRelease projFile
-        if not <| Git.Information.isCleanWorkingCopy repoDir then
-            traceImportant "Working copy not clean. SourceIndexing questionable."
-        SourceLink.Index proj.CompilesNotLinked proj.OutputFilePdb repoDir baseUrl))
+    !!"tests/**/*.??proj"
+    |> Seq.iter (fun p -> Test (fun o -> { o with Project = p })))
 
 Target "Release" (fun _ ->
     Paket.Pack (fun p ->
@@ -47,11 +25,9 @@ Target "Release" (fun _ ->
             BuildPlatform = "AnyCPU"
             OutputPath = buildDir </> "nugets" }))
 
+"Restore" ==> "Build"
 "Build" ==> "Test"
-"Clean" ==> "SourceLink"
-"Build" ==> "SourceLink"
 "Clean" ?=> "Build"
 "Test" ==> "Release"
-"SourceLink" ==> "Release"
 
 RunTargetOrDefault "Test"
