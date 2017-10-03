@@ -5,8 +5,6 @@ storage: none
 
 nuget FSharp.Compiler.CodeDom
 nuget FSharp.Compiler.Service
-nuget FSharp.Core ~> 4.1
-nuget NETStandard.Library
 nuget NHamcrest.XUnit ~> 2.0
 nuget SourceLink.Create.CommandLine
 nuget xunit

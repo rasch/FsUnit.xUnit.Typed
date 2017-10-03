@@ -49,8 +49,6 @@ NUGET
       NETStandard.Library (>= 1.6.1) - restriction: || (&& (== net462) (< net46)) (== netstandard1.6)
     NETStandard.Library (2.0)
       Microsoft.NETCore.Platforms (>= 1.1)
-      Microsoft.NETCore.Platforms (>= 1.1)
-      Microsoft.NETCore.Platforms (>= 1.1)
       Microsoft.NETCore.Platforms (>= 1.1) - restriction: == netstandard1.6
       Microsoft.Win32.Primitives (>= 4.3) - restriction: == netstandard1.6
       System.AppContext (>= 4.3) - restriction: == netstandard1.6
@@ -81,7 +79,6 @@ NUGET
       System.Runtime.Extensions (>= 4.3) - restriction: == netstandard1.6
       System.Runtime.Handles (>= 4.3) - restriction: == netstandard1.6
       System.Runtime.InteropServices (>= 4.3) - restriction: == netstandard1.6
-      System.Runtime.InteropServices.RuntimeInformation (>= 4.3)
       System.Runtime.InteropServices.RuntimeInformation (>= 4.3)
       System.Runtime.InteropServices.RuntimeInformation (>= 4.3) - restriction: == netstandard1.6
       System.Runtime.Numerics (>= 4.3) - restriction: == netstandard1.6

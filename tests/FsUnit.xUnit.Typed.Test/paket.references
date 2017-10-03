@@ -1,7 +1,4 @@
 FSharp.Compiler.CodeDom
 FSharp.Compiler.Service
-FSharp.Core
-NETStandard.Library
 xunit
-xunit.abstractions
 xunit.runner.visualstudio
