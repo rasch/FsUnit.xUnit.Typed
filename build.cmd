@@ -1,3 +1,3 @@
-dotnet test -l Appveyor
+dotnet test
 dotnet build -c Release
 .paket\paket.exe pack .build/nugets

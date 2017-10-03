@@ -5,4 +5,3 @@
 bin/
 obj/
 /paket-files
-**/TestResults/*.trx
