@@ -6,7 +6,7 @@ cache:
   - '%LocalAppData%\NuGet\Cache -> paket.lock'
 test: off
 build_script:
-- cmd: build.cmd Release
+- cmd: build.cmd
 artifacts:
   - path: '.build\nugets\*.nupkg'
     name: nuget

@@ -1,14 +1,21 @@
 {
-    "version": "0.1.0",
-    "command": ".\\packages\\.build\\FAKE\\tools\\FAKE.exe",
-    "isShellCommand": true,
-    "args": [],
+    "version": "2.0.0",
     "tasks": [
         {
             "taskName": "build",
-            "args": [ ],
-            "isBuildCommand": true,
-            "showOutput": "always"
+            "command": "dotnet build",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "test",
+            "command": "dotnet test",
+            "type": "shell",
+            "group": "test"
         }
     ]
 }

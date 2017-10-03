@@ -1,8 +1,3 @@
 FSharp.Core
-FSharp.NET.Sdk
-NHamcrest
-xunit
-xunit.abstractions
-
-group .build
-    SourceLink.Create.CommandLine
+NHamcrest.XUnit
+SourceLink.Create.CommandLine

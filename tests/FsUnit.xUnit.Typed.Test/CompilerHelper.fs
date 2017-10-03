@@ -14,7 +14,7 @@ type private Result =
 | CheckError of string list
 | Aborted
 
-let private checker = FSharpChecker.Create(keepAllBackgroundResolutions = true, msbuildEnabled = false)
+let private checker = FSharpChecker.Create(keepAllBackgroundResolutions = true)
 let private whiteSpace = Regex(@"\s+", RegexOptions.Compiled)
 let private preamble =
     [ typeof<MatchException>; typeof<IMatcher<_>> ]

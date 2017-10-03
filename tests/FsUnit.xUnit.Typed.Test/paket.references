@@ -1,11 +1,7 @@
+FSharp.Compiler.CodeDom
+FSharp.Compiler.Service
 FSharp.Core
-FSharp.NET.Sdk
-Microsoft.NET.Test.Sdk
-NHamcrest
+NETStandard.Library
 xunit
 xunit.abstractions
-
-group .test
-    FSharp.Compiler.CodeDom
-    FSharp.Compiler.Service
-    xunit.runner.visualstudio
+xunit.runner.visualstudio

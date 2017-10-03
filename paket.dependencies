@@ -1,22 +1,12 @@
 source https://api.nuget.org/v3/index.json
 framework: auto-detect
-nuget FSharp.Core >= 4.1.0
-nuget FSharp.NET.Sdk >= 1.0.0
-nuget Microsoft.NET.Test.Sdk 15.0.0
-nuget NHamcrest
-nuget xunit 2.2.0
-nuget xunit.abstractions ~> 2
+redirects: on
 
-group .build
-    source https://api.nuget.org/v3/index.json
-    framework: auto-detect
-    nuget Fake
-    nuget SourceLink.Create.CommandLine
-
-group .test
-    source https://api.nuget.org/v3/index.json
-    framework: auto-detect
-    nuget FSharp.Compiler.CodeDom
-    nuget FSharp.Compiler.Service
-    nuget xunit.runner.console ~> 2.3 prerelease
-    nuget xunit.runner.visualstudio 2.2.0
+nuget FSharp.Compiler.CodeDom
+nuget FSharp.Compiler.Service
+nuget FSharp.Core ~> 4.1
+nuget NETStandard.Library
+nuget NHamcrest.XUnit ~> 2.0
+nuget SourceLink.Create.CommandLine
+nuget xunit
+nuget xunit.runner.visualstudio
