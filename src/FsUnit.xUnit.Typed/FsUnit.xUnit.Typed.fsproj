@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>FsUnit.xUnit.Typed</AssemblyName>
+    <WarningLevel>5</WarningLevel>
+    <OtherFlags>--warnon:3180,1182</OtherFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />

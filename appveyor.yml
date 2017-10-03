@@ -4,6 +4,7 @@ pull_requests:
 clone_depth: 3
 cache:
   - '%LocalAppData%\NuGet\Cache -> paket.lock'
+  - '%UserProfile%\.nuget\packages -> paket.lock'
 test: off
 build_script:
 - cmd: build.cmd
