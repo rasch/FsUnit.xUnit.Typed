@@ -1,6 +1,7 @@
 source https://api.nuget.org/v3/index.json
 framework: auto-detect
 redirects: on
+storage: none
 
 nuget FSharp.Compiler.CodeDom
 nuget FSharp.Compiler.Service
