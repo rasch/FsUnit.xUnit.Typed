@@ -1,6 +1,6 @@
 source https://api.nuget.org/v3/index.json
 framework: auto-detect
-redirects: on
+redirects: off
 storage: none
 
 nuget FSharp.Compiler.CodeDom
