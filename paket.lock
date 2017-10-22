@@ -134,7 +134,7 @@ NUGET
     runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (== net462) (< net45) (>= netstandard1.6)) (== netstandard1.6)
     runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (== net462) (< net45) (>= netstandard1.6)) (== netstandard1.6)
     runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3.2) - restriction: || (&& (== net462) (< net45) (>= netstandard1.6)) (== netstandard1.6)
-    SourceLink.Create.CommandLine (2.4)
+    SourceLink.Create.CommandLine (2.5)
       NETStandard.Library (>= 1.6.1) - restriction: || (&& (== net462) (< net461)) (== netstandard1.6)
     System.AppContext (4.3) - restriction: || (&& (== net462) (< net45) (>= netstandard1.6)) (&& (== net462) (>= netstandard1.6) (>= uap10.0)) (== netstandard1.6)
       System.Runtime (>= 4.3) - restriction: || (&& (== net462) (>= dnxcore50)) (&& (== net462) (< net46)) (== netstandard1.6)
