@@ -2,7 +2,6 @@
 
 open FSharp.Compiler.CodeDom
 open FsUnit.Xunit.Typed
-open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.SourceCodeServices
 open NHamcrest
 open System
